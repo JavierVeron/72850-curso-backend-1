@@ -6,7 +6,7 @@ const pets = [];
 petsRouter.get("/", middle1Pets, (req, res) => {
     res.send(pets);
 })
-petsRouter.post("/", uploader.single('file'), (req, res) => {
+petsRouter.post("/", uploader.single('imagen'), (req, res) => {
     if (!req.file) {
         console.log("estoy aca");
         

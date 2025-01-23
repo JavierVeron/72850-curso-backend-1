@@ -1,6 +1,7 @@
 import express from "express"
 import usersRouter from "./routes/usersRouter.js";
 import petsRouter from "./routes/petsRouter.js";
+import __dirname from "./utils.js";
 
 const app = express();
 const port = 8080;
@@ -8,7 +9,7 @@ const port = 8080;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 //app.use(express.static("public")); // Mi ruta sería => http://localhost:8080/
-app.use("/public", express.static("public")); // Mi ruta sería => http://localhost:8080/content/
+app.use(express.static(__dirname + "/public")); // Mi ruta sería => http://localhost:8080/content/
 
 app.use("/api/users", middle1, usersRouter);
 app.use("/api/pets", middle1, middle2, petsRouter);

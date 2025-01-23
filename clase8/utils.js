@@ -1,8 +1,9 @@
 import multer from "multer";
+const __dirname = "c:/xampp/htdocs/coderhouse/72850/clase8";
 
 const storage = multer.diskStorage({
     destination:function(req, file, cb) {                
-        cb(null, "/public/images")
+        cb(null, __dirname + "/public/images")
     },
     filename:function(req, file, cb) {
         cb(null, file.originalname)
@@ -10,3 +11,4 @@ const storage = multer.diskStorage({
 })
 
 export const uploader = multer({storage});
+export default __dirname;
