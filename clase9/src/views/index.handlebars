@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p>Hola, <b>{{usuario.nombre}} {{usuario.apellido}} ({{usuario.edad}})</b></p>
+            {{#if isAdmin}}
+                <div class="row">
+                {{#each food}}
+                <div class="col-md-3 text-center"><img src={{this.imagen}} class="img-fluid" /><br />{{this.nombre}}<br />${{this.precio}}</div>
+                {{/each}}
+                </div>
+            {{else}}
+                <p>No tenés permisos para acceder a esta sección!</p>
+            {{/if}}
+
+            <p class="coder">coderhouse</p>
+            <button class="btn btn-primary" onclick="saludar()">Saludar</button>
+        </div>
+    </div>
+</div>
+
+<script src="./js/hola.js"></script>
