@@ -1,0 +1,25 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="text-warning bg-black p-3 text-center">CODERHOUSE CHAT</h1>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-md-6 offset-md-3">
+            <form>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <input type="text" class="form-control" id="chatBox">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="enviarMensaje()">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div id="messageLogs" class="col-md-6 offset-md-3"></div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/index.js"></script>
